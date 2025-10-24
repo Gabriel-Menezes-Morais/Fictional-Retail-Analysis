@@ -1,4 +1,4 @@
-# Online Retail Analysis and Customer Segmentation Project
+# Online Retail Analysis
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
 ![Libraries](https://img.shields.io/badge/Libraries-Pandas%20%7C%20Scikit--learn%20%7C%20Matplotlib-orange.svg)
@@ -7,7 +7,7 @@
 
 This is an end-to-end data analysis project that uses a real dataset of transactions from a UK-based online retailer. The primary goal is to transform raw sales data into strategic insights and actionable business recommendations.
 
-The analysis covers everything from data cleaning and preparation to advanced customer segmentation using the RFM (Recency, Frequency, Monetary) model and the K-Means clustering algorithm, culminating in the construction of machine learning models to predict customer churn.
+The analysis covers everything from data cleaning and preparation to advanced customer segmentation using the RFM (Recency, Frequency, Monetary) model and the K-Means clustering algorithm, culminating in the construction of machine learning models to predict customer churn and predict the monetary value a customer will spend over the next 3 months.
 
 ## 2. Data Source
 
@@ -67,6 +67,23 @@ Two main models were developed to support decision-making:
 
 ## 4. Key Insights and Business Recommendations
 
+> **Insight 1 (Descriptive Analysis &  Statistical Test):** Hourly analysis revealed a significant peak in sales between 12:00 and 14:00, with Thursdays being the highest sales day of the week.
+>
+> **Recommendation 1:** Focus email marketing campaigns and flash sales on Thursday mornings to capitalize on existing traffic. And put flash sales commonly at the morning, to retain and improve the existing traffic.
+
+> **Insight 2 (Descriptive Analysis):** The ten highest-grossing products
+> 
+> **Recommendation 2:** Focus on products of the list
+
+> **Insight 3 (Descriptive Analysis):** Customer's Country analysis revealed that mostly customers come from UK, however there are 3 countries standing out: Germanym, France and Eire.
+> 
+> **Recommendation 3:** Focus marketing on UK, but, still trying to improve Germany, France and Eire Customers quantity.
+
+> **Insight 4 (Customer Segmentation):** Four customer clusters were identified. The "Champion Customers" cluster (low R, high F, high M) represents only 18% of the customer base but accounts for 62% of the total revenue. The "At-Risk Customers" cluster (high R, low F) has not made a purchase in over 150 days on average.
+>
+> **Recommendation 4:**
+> * **Champions:** Implement a VIP loyalty program to retain this group.
+> * **At-Risk:** Launch aggressive reactivation campaigns (e.g., "20% off your next purchase") to try and win them back.
 ## 5. Technologies Used
 
 * **Language:** Python 3
@@ -90,15 +107,9 @@ Two main models were developed to support decision-making:
     python -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
-
-3.  **Install the dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: Create a `requirements.txt` file with `pip freeze > requirements.txt` after installing the libraries).*
-
+    
 4.  **Download the data:**
-    * Download the `Online Retail.xlsx` file from [this link](http://archive.ics.uci.edu/ml/machine-learning-databases/00352/).
+    * Download the `Online Retail.xlsx` file from [this link](https://archive.ics.uci.edu/dataset/352/online+retail).
     * Place the file in a folder named `/data/` within the project.
 
 5.  **Run the Notebook:**
